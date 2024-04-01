@@ -58,6 +58,8 @@ client.on("message", async (message) => {
 
     // IMPORTANT: use message.content.toLowercase() for any prefixes that include cAsE sEnSiTiVe characters (yes this will eat up more ram)
     if ((message.attachments).array().length > 0 && (!ignoreList.includes(message.channel.id))) {
+        if (message.content.length > 280) return; // in case the message can't be posted on twitter (over the character limit)
+        
         let attachment = (message.attachments).array()[0]; // get the first attachment
         let ext = ".png";
 

@@ -1,6 +1,6 @@
 {
   "name": "discord-2-tweet",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Interract with Twitter from Discord",
   "main": "index.js",
   "scripts": {
