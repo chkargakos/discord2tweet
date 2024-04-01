@@ -1,0 +1,6 @@
+{
+    "prefix": "your prefix goes here",
+    "guildID": "the guild id that the bot is bound to",
+    "secretChannelID": "make sure to rename this to config.json",
+    "ignoreList": ["channel id to ignore", "more channel ids", "even more"]
+}
