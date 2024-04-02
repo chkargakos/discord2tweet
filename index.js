@@ -52,7 +52,7 @@ client.on("message", async (message) => {
     // Avoid replying to other bots and outside of a specific server
     if (message.author.bot || message.guild.id !== guildID) return;
 
-    // Remove as many characters as the prefix's length and split on every space from message content
+    // Remove as many characters as the prefix's length and split on every space of message content
     const args = message.content.slice(prefix.length).split(/ +/);
     const commandName = args.shift().toLowerCase();
 
@@ -68,9 +68,10 @@ client.on("message", async (message) => {
             if (res.headers['content-length'] > 52428800) return; // 50 mb limit
             if (res.headers['content-type'][0] == "v") ext = ".mp4"; // cheeky way to check if file is a video or an image (not the brightest idea)
 
+            // Create file using fs
             request(attachment.url).pipe(fs.createWriteStream(`temp${ext}`)).on("close", async () => {
 
-                // Try to upload the file with message.content
+                // Try to upload the file (not including message.content)
                 try {
 
                     // Create mediaID  
