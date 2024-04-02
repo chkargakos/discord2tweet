@@ -1,7 +1,7 @@
 {
   "name": "discord-2-tweet",
   "version": "0.0.2",
-  "description": "Interract with Twitter from Discord",
+  "description": "Interract with Xitter from Discord",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
